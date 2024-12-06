@@ -1,4 +1,7 @@
-all: test build
+all: test build run
+
+run:
+	bazel run //src:main
 
 build:
 	bazel build //...

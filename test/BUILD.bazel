@@ -1,0 +1,8 @@
+cc_test(
+    name = "test_library",
+    srcs = ["test_library.cpp"],
+    deps = [
+        "//src:library",
+        "@googletest//:gtest_main",
+    ],
+)

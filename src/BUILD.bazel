@@ -2,6 +2,13 @@ cc_binary(
     name = "main",
     srcs = ["main.cpp"],
     deps = [
+        ":library",
         "@spdlog",
     ],
+)
+
+cc_library(
+    name = "library",
+    hdrs = ["Library.hpp"],
+    visibility = ["//visibility:public"],
 )

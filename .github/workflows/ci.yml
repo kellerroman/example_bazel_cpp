@@ -23,3 +23,6 @@ jobs:
       - name: Build the code
         run: bazel build //...
 
+      # test
+      - name: Test the code
+        run: bazel test //...
