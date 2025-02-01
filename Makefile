@@ -8,3 +8,6 @@ build:
 
 test:
 	bazel test --verbose_failures --test_output=errors --test_summary=terse //...
+
+clean:
+	git clean -dxf
