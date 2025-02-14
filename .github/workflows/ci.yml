@@ -26,3 +26,7 @@ jobs:
       # test
       - name: Test the code
         run: bazel test //...
+
+      # test
+      - name: Run Clang-tidy
+        run: make tidy
