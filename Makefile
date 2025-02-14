@@ -11,3 +11,6 @@ test:
 
 clean:
 	git clean -dxf
+
+compile_commands:
+	bazel run :refresh_compile_commands
