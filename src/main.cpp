@@ -7,7 +7,8 @@ int main(int argc, char **argv) {
   spdlog::info("starting main");
 
   Library lib;
-  spdlog::info("Sum of 5 and 3 is {}", lib.add(5, 3));
+  constexpr int var1{5};
+  spdlog::info("Sum of 5 and 3 is {}", lib.add(var1, 3));
 
   spdlog::info("main done");
   return 0;

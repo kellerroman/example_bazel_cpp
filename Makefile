@@ -12,5 +12,9 @@ test:
 clean:
 	git clean -dxf
 
-compile_commands:
+commands:
 	bazel run :refresh_compile_commands
+
+tidy:
+	bazel build //... --config clang-tidy
+
