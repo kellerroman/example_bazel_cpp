@@ -2,7 +2,9 @@
 
 class Library {
 public:
-  Library() {}
+  Library() = default;
 
-  double add(double a, double b) { return a + b; }
+  auto static add(double first, double second) -> double {
+    return first + second;
+  }
 };

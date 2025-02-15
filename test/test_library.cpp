@@ -3,6 +3,6 @@
 #include <gtest/gtest.h>
 
 TEST(TestLibrary, Simple) {
-  Library lib;
-  EXPECT_EQ(lib.add(1, 1), 2);
+  // Library lib;
+  EXPECT_EQ(Library::add(1, 1), 2);
 }
