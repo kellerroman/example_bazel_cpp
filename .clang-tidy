@@ -6,7 +6,10 @@ Checks: >
     google-*,
     performance-*,
     clang-diagnostic-*,
-    clang-analyzer-*
+    clang-analyzer-*,
+    modernize-*,
+    readability-*,
+    misc-*
 
 WarningsAsErrors: "*"
 SystemHeaders:   false
