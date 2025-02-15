@@ -29,4 +29,20 @@ jobs:
 
       # test
       - name: Run Clang-tidy
-        run: make tidy
+        run: make tidy 2>&1 | tee clang-tidy-output.txt
+
+      - name: Install Rust
+        run: |
+          curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+          source $HOME/.cargo/env
+          cargo install clang-tidy-sarif
+
+      - name: Convert to SARIF
+        run: |
+          clang-tidy-sarif --input clang-tidy-output.txt --output results.sarif
+
+      - name: Upload SARIF Report
+        uses: github/codeql-action/upload-sarif@v2
+        with:
+          sarif_file: results.sarif
+
