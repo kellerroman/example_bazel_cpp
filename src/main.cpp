@@ -2,7 +2,7 @@
 #include "spdlog/spdlog.h"
 #include "src/Library.hpp"
 
-auto main(int /*argc*/, char ** /*argv*/) -> int {
+auto main(int argc, char ** /*argv*/) -> int {
   spdlog::set_level(spdlog::level::debug);
   spdlog::set_pattern("[%T.%e] %^[%L]%$ %v");
   spdlog::info("starting main");
